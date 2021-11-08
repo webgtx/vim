@@ -13,6 +13,8 @@ elif [[ $1 == '' ]]; then
   echo "Okay, starting installtion without testing..."
 fi
 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 cp -r nvim $HOME/.config/
 echo Done!
 
