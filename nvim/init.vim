@@ -10,4 +10,5 @@ Plug 'ap/vim-css-color'
 Plug 'digitaltoad/vim-jade'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'posva/vim-vue'
 call plug#end()
