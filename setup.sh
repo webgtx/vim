@@ -16,7 +16,8 @@ case "$1" in
   "--theme")
     echo "1) uwu"
     echo "2) gruvbox"
-    read -p "Select needed colorscheme" color
+    echo "3) onedark"
+    read -p "Select needed colorscheme: " color
     case $color in
       "1")
         echo "colorscheme uwu" >> $HOME/.config/nvim/general/settings.vim
@@ -24,7 +25,11 @@ case "$1" in
       "2")
         echo "colorscheme gruvbox" >> $HOME/.config/nvim/general/settings.vim
       ;;
+      "3")
+        echo "colorscheme onedark" >> $HOME/.config/nvim/general/settings.vim
+      ;;
     esac
+  ;;
   *)
     echo "Okay, starting installtion without arguments..."
   ;;
