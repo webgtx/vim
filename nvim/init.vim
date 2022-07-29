@@ -9,7 +9,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-# LuaLine 
+" LuaLine 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
