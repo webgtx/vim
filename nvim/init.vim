@@ -12,11 +12,8 @@ Plug 'cakebaker/scss-syntax.vim'
 " LSP / Debug Support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-" LuaLine 
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
+" LightLine 
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
-lua << END
-require('lualine').setup()
-END
+set laststatus=2
