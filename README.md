@@ -1,13 +1,12 @@
-# Own config for neovim.
+# Lightweight scripts and configs for classic vim.
 
 ## Usage
 ```bash
-chmod +x setup.sh
-./setup.sh
+./init.sh
 
+# Optional
+./setup.sh
 # Arguments
-  --deb # Check req on deb-distro
-  --arch # Install req on arch-distro
   --plug # Install VimPlug
   --theme # Select colorscheme
 ```
