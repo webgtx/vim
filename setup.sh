@@ -1,8 +1,16 @@
 #!/bin/bash
 
 echo "Setup script started"
-cp -r vim $HOME/.config/
+
+if [[ -d $HOME/.vim ]]; then
+  cp -r vim $HOME/.vim 
+fi
+
 case "$1" in
+  "--init")
+    ./setup.sh --plug
+    ./setup.sh --theme
+  ;;
   "--plug")
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -13,10 +21,10 @@ case "$1" in
     read -p "Select needed colorscheme: " color
     case $color in
       "1")
-        echo "colorscheme uwu" >> $HOME/.config/vim/general/settings.vim
+        echo "colorscheme uwu" >> $HOME/.vim/general/settings.vim
       ;;
       "2")
-        echo "colorscheme gruvbox" >> $HOME/.config/vim/general/settings.vim
+        echo "colorscheme gruvbox" >> $HOME/.vim/general/settings.vim
       ;;
     esac
   ;;
