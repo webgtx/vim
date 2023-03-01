@@ -2,9 +2,8 @@
 
 echo "Setup script started"
 
-if [[ -d $HOME/.vim ]]; then
-  cp -r vim $HOME/.vim 
-fi
+cp -r .vim $HOME
+cp .vimrc $HOME
 
 case "$1" in
   "--init")
@@ -16,17 +15,9 @@ case "$1" in
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ;;
   "--theme")
-    echo "1) uwu"
-    echo "2) gruvbox"
-    read -p "Select needed colorscheme: " color
-    case $color in
-      "1")
-        echo "colorscheme uwu" >> $HOME/.vim/general/settings.vim
-      ;;
-      "2")
-        echo "colorscheme gruvbox" >> $HOME/.vim/general/settings.vim
-      ;;
-    esac
+    tree .vim/colors
+    read -p "Write colorscheme name: " theme 
+    echo "colorscheme $theme" >> $HOME/.vim/general/settings.vim
   ;;
   *)
     echo "Okay, starting installtion without arguments..."
