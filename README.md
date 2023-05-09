@@ -1,12 +1,10 @@
-# Lightweight scripts and configs for classic vim.
+# Fully-featured Portable Vim
 
 ## Usage
+Just run `setup.sh` for installation
 ```bash
-./init.sh
-
-# Optional
-./setup.sh
-# Arguments
-  --plug # Install VimPlug
-  --theme # Select colorscheme
+Arguments:
+    --extended -e   # Setup extended sre/devops intergration
+    --clear -c      # Delete all thrid-party plugins  
+    --theme -t      # Select colorscheme
 ```
