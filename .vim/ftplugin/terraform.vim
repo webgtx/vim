@@ -1,0 +1,2 @@
+ab azprov terraform {<CR>  required_providers {<CR>    azurerm = {<CR>      source = "hashicorp/azurerm"<CR>      version = "3.77.0"<CR>    }<CR>  }<CR>}<CR><CR>provider "azurerm" {<CR>  # Configuration options<CR>
+ab awsprov terraform {<CR>  required_providers {<CR>    aws = {<CR>      source = "hashicorp/aws"<CR>      version = "5.22.0"<CR>    }<CR>  }<CR>}<CR><CR>provider "aws" {<CR>  # Configuration options<CR>}<CR>
