@@ -1,2 +1,2 @@
-ab sockserv import socket 
-ab hw print("Hello World")
+ab sockserv import socket<CR><CR>HOST = "192.168.1.98"<CR>PORT = 9090<CR><CR>server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<CR>server.bind((HOST, PORT))<CR><CR>server.listen(5)<CR>print(f"Server is running on {HOST}:{PORT}")<CR><CR>while True:<CR>    communcation_sock, addr = server.accept()<CR>    print(f"Connected to {addr}")<CR>    msg = communcation_sock.recv(1024).decode("ascii")<CR>    print(f"Client says: {msg}")<CR>    communcation_sock.send("Got you, thanks".encode('ascii'))<CR>    communcation_sock.close()<CR>    print(f"Connection with {addr} was closed") <CR>
+ab ezyaml import yaml<CR>with open(argv[1], "r") as stream:<CR>  data = yaml.safe_load(stream)<CR>
