@@ -7,8 +7,8 @@ set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Ruler for codestyle
-set colorcolumn=75                      " The size of ruler
+" set ruler              			            " Ruler for codestyle
+" set colorcolumn=75                      " The size of ruler
 " set cmdheight=2                       " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse

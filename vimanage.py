@@ -46,12 +46,12 @@ class VIManager:
 
         return f"Colorscheme: {name}\nTerminalLineBG: {termlinebg}"
 
-    def extend(self, intergrations: tuple = None, full: bool = False):
+    def extend(self, intergrations: tuple = ("terraform",), full: bool = False):
         plugins = self.intergrations if full else intergrations
         for intergration in plugins:
             subprocess.run(self.intergrations[intergration].split(" "))
 
-        return f"Installed intergrations: {list(plugins.keys())}"
+        return f"Installed intergrations: {list(plugins)}"
 
 
 if __name__ == "__main__":
