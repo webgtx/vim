@@ -8,9 +8,11 @@ class VIManager:
     def __init__(self):
         self.plugins_path = f"{environ['HOME']}/.vim/pack/plugins/start"
         self.home_path = environ["HOME"]
+        self.gh_url = "https://github.com/"
         self.intergrations = {
-            "terraform": f"git clone https://github.com/hashivim/vim-terraform.git {self.plugins_path}/vim-terraform",
-            "d2": f"git clone https://github.com/terrastruct/d2-vim {self.plugins_path}/d2-vim",
+            "terraform": f"git clone {self.gh_url}hashivim/vim-terraform.git {self.plugins_path}/vim-terraform",
+            "d2": f"git clone {self.gh_url}terrastruct/d2-vim {self.plugins_path}/d2-vim",
+            "completor": f"git clone {self.gh_url}maralla/completor.vim {self.plugins_path}/completor"
         }
 
     def install(self):
