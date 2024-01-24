@@ -1,6 +1,3 @@
-" set leader key
-" let g:mapleader = "\<Space>"
-
 syntax enable                           " Enables syntax highlighing
 set noequalalways                       " Prevent from autoresizing
 set hidden                              " Required to keep multiple buffers open multiple buffers
