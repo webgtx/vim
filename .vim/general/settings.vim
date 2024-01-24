@@ -41,3 +41,6 @@ cmap w!! w !sudo tee %
 
 " Autocomplete options
 let g:completor_complete_options = 'menuone,noselect'
+
+" Workspace session directories
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
