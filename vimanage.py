@@ -9,13 +9,15 @@ class VIManager:
         self.plugins_path = f"{environ['HOME']}/.vim/pack/plugins/start"
         self.home_path = environ["HOME"]
         self.gh_url = "https://github.com/"
-        self.intergrations = {
-            "terraform": f"git clone {self.gh_url}hashivim/vim-terraform.git {self.plugins_path}/vim-terraform",
-            "d2": f"git clone {self.gh_url}terrastruct/d2-vim {self.plugins_path}/d2-vim",
-            "completor": f"git clone {self.gh_url}maralla/completor.vim {self.plugins_path}/completor"
+        self.integrations = {
+            "terraform": "hashivim/vim-terraform.git",
+            "d2": "terrastruct/d2-vim",
+            "completor": "maralla/completor.vim",
+            "fzf": "junegunn/fzf.vim",
         }
 
     def install(self):
+        "Install VIM configuration"
         try:
             remove(f"{self.home_path}/.vimrc")
             rmtree(f"{self.home_path}/.vim")
@@ -48,12 +50,13 @@ class VIManager:
 
         return f"Colorscheme: {name}\nTerminalLineBG: {termlinebg}"
 
-    def extend(self, intergrations: tuple = ("terraform",), full: bool = False):
-        plugins = self.intergrations if full else intergrations
-        for intergration in plugins:
-            subprocess.run(self.intergrations[intergration].split(" "))
+    def extend(self, integrations: tuple = ("terraform",), full: bool = False):
+        plugins = tuple(self.integrations.keys()) if full else integrations
+        plugins = plugins if type(plugins) is tuple else [plugins]
+        for integration in plugins:
+            subprocess.run(f"git clone {self.gh_url}/{self.integrations[integration]} {self.plugins_path}/{self.integrations[integration].split('/')[1]}".split(" "))
 
-        return f"Installed intergrations: {list(plugins)}"
+        return f"Installed integrations: {list(plugins)}"
 
 
 if __name__ == "__main__":
