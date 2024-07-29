@@ -14,6 +14,7 @@ class VIManager:
             "d2": "terrastruct/d2-vim",
             "completor": "maralla/completor.vim",
             "fzf": "junegunn/fzf.vim",
+            "css-colors": "ap/vim-css-color",
         }
 
     def install(self):
