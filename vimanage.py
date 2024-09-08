@@ -15,6 +15,7 @@ class VIManager:
             "completor": "maralla/completor.vim",
             "fzf": "junegunn/fzf.vim",
             "css-colors": "ap/vim-css-color",
+            "wakatime": "wakatime/vim-wakatime"
         }
 
     def install(self):
