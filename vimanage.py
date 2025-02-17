@@ -16,7 +16,8 @@ class VIManager:
             "fzf": "junegunn/fzf.vim",
             "css-colors": "ap/vim-css-color",
             "wakatime": "wakatime/vim-wakatime",
-            "airline": "vim-airline/vim-airline"
+            "airline": "vim-airline/vim-airline",
+            "vim-json": "elzr/vim-json"
         }
 
     def install(self):
