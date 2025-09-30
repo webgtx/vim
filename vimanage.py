@@ -18,7 +18,8 @@ class VIManager:
             # "wakatime": "wakatime/vim-wakatime",
             "airline": "vim-airline/vim-airline",
             "vim-json": "elzr/vim-json",
-            "vim-elixir": "elixir-editors/vim-elixir"
+            "vim-elixir": "elixir-editors/vim-elixir",
+            "vimwiki": "vimwiki/vimwiki"
         }
 
     def install(self):
